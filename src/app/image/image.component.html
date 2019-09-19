@@ -1,0 +1,17 @@
+<div>
+<div class="col-md-12">
+    <div [ngStyle] = "{'background-image':'url('+image.url+')'}" class ="img-container"></div>
+</div>
+
+</div>
+
+<div>
+    <div class="col-md-12 caption-row">
+        <span id="caption" *ngIf="!image.caption">
+       This image doesn't have a caption
+        </span>
+        <span id="caption">
+            {{image.caption}}
+        </span>
+    </div>
+</div>

@@ -1,0 +1,8 @@
+.tn{
+    margin: 6px;
+    border: 4px solid #eee;
+    box-shadow: #555 1ps 1px 8px 1px;
+}
+
+ul{padding: 0; width: 100%; margin: 20px auto}
+li{ display: inline;}
