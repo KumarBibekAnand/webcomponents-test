@@ -2,7 +2,11 @@
     margin: 6px;
     border: 4px solid #eee;
     box-shadow: #555 1ps 1px 8px 1px;
+    opacity: 0.5;
 }
 
+.tn:hover{
+    opacity: 1;
+}
 ul{padding: 0; width: 100%; margin: 20px auto}
 li{ display: inline;}

@@ -1,5 +1,6 @@
-import { Component, OnChanges, Input } from '@angular/core';
+import { Component, OnChanges,OnInit, Input } from '@angular/core';
 import { ImageService } from '../image/shared/image.service';
+import { ActivatedRoute,Router} from '@angular/router';
 
 @Component({
   selector: 'app-pic-gallary',
@@ -9,13 +10,17 @@ import { ImageService } from '../image/shared/image.service';
 export class PicGallaryComponent implements OnChanges {
 
   @Input() filterBy?: string ='all'
+  image:any;
+  id:number;
   visibleImages: any[] = [];
-  constructor(private imageService: ImageService) { 
+  constructor(private imageService: ImageService,private route: ActivatedRoute, private router: Router) { 
     this.visibleImages = this.imageService.getImages();
   }
+
 
   ngOnChanges() {
     this.visibleImages = this.imageService.getImages();
   }
+ 
 
 }
