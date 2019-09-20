@@ -1,6 +1,7 @@
-import { Component, OnChanges,OnInit, Input } from '@angular/core';
+import { Component, OnChanges,OnInit,Output, Input } from '@angular/core';
 import { ImageService } from '../image/shared/image.service';
 import { ActivatedRoute,Router} from '@angular/router';
+import { EventEmitter } from 'events';
 
 @Component({
   selector: 'app-pic-gallary',
@@ -10,6 +11,8 @@ import { ActivatedRoute,Router} from '@angular/router';
 export class PicGallaryComponent implements OnChanges {
 
   @Input() filterBy?: string ='all'
+  @Output() myEvent = new EventEmitter();
+  
   image:any;
   id:number;
   visibleImages: any[] = [];

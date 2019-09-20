@@ -3,7 +3,7 @@
 <div class="row">
     <ul id ="thumbnailsList">
         <li *ngFor = "let image of visibleImages">
-            <a  [routerLink]="['/image',image.id]">
+            <a  [routerLink]="['/image',image.id]" (click)="ImageComponent()">
             <img src ="{{image.url}}" class="tn" width="200" height="160">
             </a>
         </li>
